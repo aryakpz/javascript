@@ -1,0 +1,60 @@
+
+input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid green;
+}
+
+button{
+    background-color: rgba(7, 165, 7, 0.856);
+    font-size: 20px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    border: none;
+}
+#delete{
+    color: green;
+    background-color: white;
+    border: 1px solid green;
+}
+ ul{
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 20px;
+  
+ }
+ a{
+    color: green;
+    line-height: 27px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div{
+    box-sizing: border-box;
+    height: 180px;
+    width: 90%;
+    margin-inline: auto;
+    background-color: rgba(35, 179, 131, 0.952);
+}
+h2{
+    color: aliceblue;
+    text-align: center;
+   padding-top: 13%;
+}
