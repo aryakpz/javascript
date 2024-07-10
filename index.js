@@ -34,11 +34,22 @@
 // add(3,5)
 
 
-function getarr( ar){
- return ar[2]
-}
+// function getarr( ar){
+//  return ar[2]
+// }
 
 
-let array=[1,2,3,4]
-let a=getarr(array)
-console.log(a)
+// let array=[1,2,3,4]
+// let a=getarr(array)
+// console.log(a)
+
+
+(function(){
+    var b=document.getElementById("bt")
+    b.addEventListener("click",function(){
+      console.log("haii")
+      console.log(a+b)
+    })
+})();
+
+
