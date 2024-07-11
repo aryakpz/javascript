@@ -82,15 +82,36 @@
 // console.log(castle.image)
 
 
-let person={
- name:"arya",
- age:23,
- country:"india"
+// let person={
+//  name:"arya",
+//  age:23,
+//  country:"india"
+// }
+
+
+// function logdata(){
+//     console.log(person.name + " is "+ person.age + "  years old and lives in "+ person.country)
+// }
+
+// logdata()
+
+
+let isg = true;
+let hand = null;
+ export function start() {
+  if (!hand) {
+    hand = setInterval(() => {
+      document.body.style.background = isg ? 'blue' : 'red';
+      isg = !isg
+    }, 400);
+  }
+
+}
+ export function stop() {
+  if (hand) {
+    clearInterval(hand);
+    hand = null;
+    document.body.style.background = 'none'
+  }
 }
 
-
-function logdata(){
-    console.log(person.name + " is "+ person.age + "  years old and lives in "+ person.country)
-}
-
-logdata()

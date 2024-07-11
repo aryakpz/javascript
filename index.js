@@ -18,7 +18,7 @@
 //     }
 
 
- 
+
 // const welc =document.getElementById("wel")
 //    function user(name,jem){
 //     welc.textContent=`${name} ${jem}`
@@ -44,12 +44,49 @@
 // console.log(a)
 
 
-(function(){
-    var b=document.getElementById("bt")
-    b.addEventListener("click",function(){
-      console.log("haii")
-      console.log(a+b)
-    })
-})();
+// (function(){
+//     var b=document.getElementById("bt")
+//     b.addEventListener("click",function(){
+//       console.log("haii")
+//       console.log(a+b)
+//     })
+// })();
 
+
+
+// import { add } from "/extens.js"
+// const val=[2,3,4,3]
+// var s=add(val)
+// console.log(s)
+
+// import {
+//   name
+// } from './extens.js'
+
+// console.log(name)
+
+
+//==============================  dynamic  import ==========================================//
+
+// import {
+//   create
+// } from './extens.js'
+
+
+// create("feature 1", () => {
+//   console.log("clicked 1")
+//   alert("welcome to disco")
+// })
+
+// create("feature 2", () => {
+
+//   console.log("clicked 2")
+//   import('/script.js')
+//     .then((obj) => {
+
+
+//       create("start disco", obj.start)
+//       create("stop disco", obj.stop)
+//     });
+// })
 

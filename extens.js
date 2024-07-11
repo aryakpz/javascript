@@ -701,7 +701,7 @@
 // }
 // class gb extends Button{
 //   onclick(fn){
-    
+
 //     super.onclick( function()
 //    {
 //     this.button.style.background='red'
@@ -752,7 +752,7 @@
 //  }
 //  function value2(){
 //   return 20;
- 
+
 
 //  }
 
@@ -831,3 +831,263 @@
 
 
 //=====================================================================//
+
+
+// console.log('script1')
+//  export function add(a)
+// {
+//   return a.reduce((total,item)=>total+item,0);
+// }
+
+
+
+//==========================    import  & export ================================//
+
+//  export const name="arya"
+// const data ={
+//   name:"arya",
+//   age:23
+// }
+
+//  export function add(a=[]){
+//   console.log("addall")
+//   return a.reduce((total,item)=>total+item ,0)
+// }
+
+
+//  export function max(a=[])
+// {
+//   console.log("max")
+//   return Math.max(...a)
+// }
+
+
+
+// function log(val)
+// {
+//   console.log('inside',val)
+// }
+
+
+
+//==============================   dynmaic import   ==============================================//
+
+
+// export function create(name,fn){
+//   const bt=document.createElement('button')
+//   bt.innerHTML=name
+//   document.body.appendChild(bt)
+//   bt.onclick=fn
+// }
+
+
+
+//====================== string literal =============================================//
+
+
+// document.body.innerHTML=`
+//   <div>
+//   <h1> product name </h1>
+//   <p>price 000</p>
+//   </div>
+// `
+
+
+// var a="arya "
+// var b=23
+// document.body.innerHTML=`
+// i am ${a} age is ${b}`
+
+
+//=================  default parametrs  ==============================================//
+
+
+
+// function avg(a=sum(),b=a)
+// {
+//   console.log(a,b)
+//    var s= a+b
+//    return s
+
+// }
+// function sum(){
+//   return 20
+// }
+
+//  let p=avg(1)
+// console.log(p)
+
+
+
+//=================== rest operator ===============================================//
+
+
+// function test(...all){
+//   const sum=all.reduce((total,item)=>total+item,0)
+//   console.log(sum)
+
+// }
+
+// test(11,34,55,3,4,3,90)
+
+
+// function test(...all)
+// {
+//   console.log(all)
+// }
+
+// var a=[1,2,3,4]
+// test(...a)
+
+
+
+
+///===================  parameter destructuring =====================================//
+
+
+
+// function print({name,age}){
+// console.log(name,age)
+// }
+
+//   const p=
+//   {
+//   name:"Arya",
+//   age:23
+//   }
+
+
+//  print(p);
+
+
+
+//  ====================let var  const ============================================//
+
+// function submit(){
+//     const items=document.getElementById('data')
+//     const data ={}
+//     for(let item of items)
+//         {
+//             data[item.name]=item.value;
+//         }
+//     console.log(data);
+// }
+
+
+
+
+// var json={
+
+//     name:'code malayalam',
+//     age:23,
+//     topic:['js','react','scss','git','aws'],
+//     caption:'keep calm and js'
+// }
+
+
+// var json= "anjaly"
+
+
+// var j =JSON.stringify(json)
+// console.log(j)
+//  var p=JSON.parse(j)
+//  console.log(typeof j)
+//  console.log(p)
+//  console.log(typeof p)
+// console.log(json)
+// console.log(typeof json)
+
+
+//=====================  string  library ===============================================//
+
+
+
+
+
+
+// function texts(args) {
+//     const a = document.getElementById('te')
+//     const error = validate(args.value)
+//     if (error) {
+//         a.innerHTML = error;
+//     }
+//     else {
+//         a.innerHTML = '';
+//     }
+// }
+
+// function validate(value) {
+//     const reg = /^([012]?\d|3[01])-([0]?\d|1[012])-\d{4}$/;
+
+//     const res = value.match(reg)
+//     //  const result=reg.test(value)
+//     console.log(res)
+//     if (result) {
+//         return ''
+//     }
+//     else {
+//         return 'ivalid input'
+//     }
+// }
+
+
+//  const reg=/catt?$/;
+
+//  const result=reg.test('my var catt')
+//  const a=reg.test('i am cat')
+//  const b=reg.test("cat is small")
+
+//  console.log(result)
+// console.log(a)
+// console.log(b)
+
+
+
+
+//====================== mutable ====================================================//
+
+//  function junk(obj)
+//  {
+//     const ret={
+//         ...obj,
+//         age:23
+//     }
+//  }
+
+//  const data={
+//     name:"arya"
+//  }
+// var result=junk(data)
+
+// console.log(result===data)
+
+
+//=============================    immer    =========================================//
+
+
+
+
+var bt=document.getElementById('btn')
+bt.onclick=()=>{
+console.log("started")
+
+
+//    $.ajax({
+//     url:'https://jsonplaceholder.typicode.com/todos/1',
+//     success:(data)=>{
+//         console.log(data);
+//     },
+//     async:false,
+//    }); 
+
+
+
+var ar=[1,2,3,4]
+ar.forEach((item)=>
+{
+    console.log(item)
+})
+
+
+   console.log("ended")
+}
