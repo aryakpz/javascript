@@ -366,6 +366,7 @@
 //     msg:'helo three'
 //   }
 // ];
+
 // function main(){
 //   obj.forEach((item)=>{
 //     let  bt = document.createElement('button')
@@ -1067,27 +1068,198 @@
 
 
 
-var bt=document.getElementById('btn')
-bt.onclick=()=>{
-console.log("started")
+// var bt=document.getElementById('btn')
+// bt.onclick=()=>{
+// console.log("started")
 
 
-//    $.ajax({
-//     url:'https://jsonplaceholder.typicode.com/todos/1',
-//     success:(data)=>{
-//         console.log(data);
+// //    $.ajax({
+// //     url:'https://jsonplaceholder.typicode.com/todos/1',
+// //     success:(data)=>{
+// //         console.log(data);
+// //     },
+// //     async:false,
+// //    }); 
+
+
+
+// var ar=[1,2,3,4]
+// ar.forEach((item)=>
+// {
+//     console.log(item)
+// })
+
+
+//    console.log("ended")
+// }
+
+
+
+
+//============================================================================================//
+
+
+
+// var bt = document.getElementById("btn")
+// var text = document.getElementById("input")
+// bt.onclick = () => {
+//     console.log("start")
+//     var array = [];
+
+//     $.ajax({
+//         url: 'https://jsonplaceholder.typicode.com/todos/1',
+//         success: (data) => {
+//             console.log("start ajax 1")
+//             array.push(data.title)
+//             $.ajax({
+//                 url: 'https://jsonplaceholder.typicode.com/todos/2',
+//                 success: (data) => {
+
+//                     console.log("start ajax 2")
+//                     array.push(data.title)
+//                     document.getElementById('input').value = array.join('\n')
+//                     console.log("end ajax 2")
+//                 },
+//                async:true,
+//             })
+//             console.log("end ajax 1")
+//         },
+//         async:true,
+//     })
+//     //    text.innerHTML=array
+// }
+
+
+
+//==================================  promise ===============================================//
+
+
+
+// console.log("started")
+// $.ajax({
+//     type:'GET',
+//     url: 'https://jsonplaceholder.typicode.com/todos/1',
+//     success:(msg)=>{
+//         console.log(msg)
 //     },
-//     async:false,
-//    }); 
+//     error:(xhr,statusText)=>{
+//         console.log(statusText)
+//     } 
+// })
+
+// console.log("ended ")
+
+
+//---------------------change the code into promise ------------------------------------------//
+
+
+// console.log("started")
+
+// var pr=fetch('https://jsonplaceholder.typicode.com/todos/1');
+//  function buttonclick(){
+
+
+// pr.then((data)=>{
+//     console.log(data)
+// });
+
+// }
+
+
+//=========================   promise chaining ============================================//
+
+
+// console.log("start 1")
+
+// var pr = fetch('https://jsonplaceholder.typicode.com/todos/1');
+// pr.then((data) => {
+//     console.log(data)
+
+
+//     console.log(" start 2")
+//     var pr = fetch('https://jsonplaceholder.typicode.com/todos/2');
+//     pr.then((data) => {
+//         console.log(data)
+
+
+//         console.log(" start 3")
+//         var pr = fetch('https://jsonplaceholder.typicode.com/todos/3');
+//         pr.then((data) => {
+//             console.log(data)
+//         });
+
+//     });
+
+// });
 
 
 
-var ar=[1,2,3,4]
-ar.forEach((item)=>
-{
-    console.log(item)
-})
+//==================  chain  edited=========================================================//
+
+// myfetch('https://jsonplaceholder.typicode.com/todos/1')
+// .then((data)=>{
+//    console.log(data)
+//    return myfetch('https://jsonplaceholder.typicode.com/todos/2')
+// })
+// .then((data)=>{
+//    console.log(data)
+//    return myfetch('https://jsonplaceholder.typicode.com/todos/3')
+// })
+// .then((data)=>
+// console.log(data)
+// )
 
 
-   console.log("ended")
-}
+//========================= buildin fetch ============================================//
+
+
+// getjson('https://jsonplaceholder.typicode.com/todos/1')
+// .then((data)=>{
+//    console.log(data);
+//     return getjson('https://jsonplaceholder.typicode.com/todos/2')
+// })
+
+// .then((data)=>{
+//     console.log(data)
+//     return getjson('https://jsonplaceholder.typicode.com/todos/3')
+// })
+// .then((data)=>{
+//     console.log(data)
+// })
+
+// .catch((error)=>{
+//     console.log("error",error)
+//     return "something went wrong"
+// });
+
+
+//======================  util function ================================================//
+
+// getjson('https://jsonplaceholder.typicode.com/todos/1')
+
+// .then((data)=>{
+// //    console.log(data)
+// })
+
+// Promise.all([
+//     getjson('https://jsonplaceholder.typicode.com/todos/1'),
+//     getjson('https://jsonplaceholder.typicode.com/todos/2'),
+//     getjson('https://jsonplaceholder.typicode.com/todos/3')
+// ])
+// .then((data)=>{
+//     console.log(data)
+// })
+
+
+//======================  race ===========================================================//
+
+
+// Promise.race([
+//     getjson('https://jsonplaceholder.typicode.com/todos/1'),
+//     getjson('https://jsonplaceholder.typicode.com/todos/2'),
+//     getjson('https://jsonplaceholder.typicode.com/todos/3')
+// ])
+// .then((data)=>{
+//     console.log(data)
+// })
+

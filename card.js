@@ -5,6 +5,9 @@
 // let isAlive = true
 // let cards =[first,second]
 
+
+
+
 let sum = 0
 let isAlive = false
 let cards = []
@@ -87,20 +90,6 @@ function newcard() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // let age =23
 // if (age >22 ){
 //     console.log("get")
@@ -154,3 +143,5 @@ function newcard() {
 // function gencertificate(){
 //     console.log("generating certificate")
 // }
+
+

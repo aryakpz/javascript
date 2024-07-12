@@ -96,6 +96,12 @@
 // logdata()
 
 
+
+
+
+
+
+
 let isg = true;
 let hand = null;
  export function start() {
@@ -107,6 +113,8 @@ let hand = null;
   }
 
 }
+
+
  export function stop() {
   if (hand) {
     clearInterval(hand);

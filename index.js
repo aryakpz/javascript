@@ -68,9 +68,7 @@
 
 //==============================  dynamic  import ==========================================//
 
-// import {
-//   create
-// } from './extens.js'
+// import {create } from './extens.js'
 
 
 // create("feature 1", () => {
@@ -79,6 +77,7 @@
 // })
 
 // create("feature 2", () => {
+
 
 //   console.log("clicked 2")
 //   import('/script.js')
@@ -89,4 +88,89 @@
 //       create("stop disco", obj.stop)
 //     });
 // })
+
+
+//================================= promise =================================================//
+
+
+
+// function myfetch(urls) {
+
+//     return new Promise((res, rej) => {
+//         $.ajax({
+//             type: 'GET',
+//             url: urls,
+//             success: (data) => {
+//                  res(data.title)
+//             },
+//             error:(xhr,statusText)=>{
+//                 rej(statusText)
+//             }
+//         })
+//     });
+// }
+
+
+//=============================   build in fetch ============================================//
+
+
+// function getjson(url) {
+
+   
+//     return fetch(url)
+//         .then((data) => {
+//             return data.json();
+//         })
+// }
+
+
+
+//=======================    async & await ================================================//
+
+
+// async function getvalue(){
+//     return 112
+//  }
+
+//  const result=getvalue();
+//  result.then((data)=>{
+//     console.log(data)
+// }
+
+
+
+var a=getvalue()
+a.then((data)=>{
+    console.log(data)
+})
+
+
+
+
+
+// .catch((err)=>{
+//     console.log("handled")
+// })
+
+// function getvalue(){
+//     fetch('https://jsonplaceholder.typicode.com/todos/1')
+//     .then((data)=>
+//     {
+//       console.log(data)
+//     })
+// }
+
+
+// async function getvalue(){
+
+//     try{
+//     const data= await fetch('https://jsonplaceholder.typicode.com/todos/1')
+//      const jdata=await data.json()
+//     // console.log(jdata)
+//     return(jdata)
+//     }
+//     catch(e){
+//         console.log("handled")
+//     }
+// }
 
