@@ -274,3 +274,68 @@
 
 
 
+// const bt = document.getElementById('btn')
+// const ename = document.getElementById("name")
+// const emoji = []
+
+// async function getemoji() {
+//     let response = await fetch("https://emoji-api.com/emojis?access_key=11d9ecdb7d9f1bb39c4f94f54b02f0ab78f42643")
+//     data = await response.json()
+//     for (let i = 0; i<1500; i++) {
+//         emoji.push({
+//             emojiname: data[i].character,
+//             emojicode: data[i].unicodeName
+//         })
+//     }
+// }
+
+// console.log(emoji)
+// getemoji();
+// bt.addEventListener("click", () => {
+//     const random=Math.floor(Math.random()*1500)
+//     bt.innerHTML=emoji[random].emojiname
+//     ename.innerHTML=emoji[random].emojiname
+// })
+
+
+
+//=========================  loading bar =====================================================//\
+
+
+// const counterel=document.querySelector(".counter")
+
+// const bar=document.querySelector(".loadingtop")
+
+// let id=0
+// updatenum()
+
+// function updatenum(){
+//     counterel.innerHTML=id +"%"
+//     bar.style.width=id +"%"
+//     id=id+1;
+//     if (id <101){
+//         setTimeout(updatenum,600)
+//     }
+
+// }
+
+
+
+//======================= scrolled window =================================================//
+
+// const img=document.getElementById("image")
+
+
+// window.addEventListener("scroll",()=>{
+//     updateimage()
+// })
+
+// function updateimage(){
+//     img.style.opacity =1-window.pageYOffset/1500
+//     img.style.backgroundSize=160-window.pageYOffset /16 +"%"
+// }
+
+
+
+//============================ mouse event =========================================//
+
