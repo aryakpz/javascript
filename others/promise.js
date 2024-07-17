@@ -339,3 +339,60 @@
 
 //============================ mouse event =========================================//
 
+
+// const x=document.querySelector(".mouse.x")
+// const y= document.querySelector(".mouse.y")
+// const container=document.querySelector(".container")
+// window.addEventListener("mousemove",(event)=>{
+//     x.innerHTML=event.clientX
+//     y.innerHTML=event.clientY
+// })
+
+
+
+// ============================  dice  ===================================//
+
+const btn=document.getElementById("roll")
+const diceel=document.getElementById("dice")
+
+function rolls(){
+    const result=Math.floor(Math.random() * 6)+1;
+    const face=getface(result)
+    diceel.innerHTML=face;
+    histry.push(result)
+    updatehistory()
+}
+
+
+function updatehistory(){
+
+}
+
+function getface(result){
+    switch(result){
+        case 1:return "&#9856;";
+        case 2:return "&#9857;";
+        case 3:return "&#9858;";
+        case 4:return "&#9859;";
+        case 5:return "&#9860;";
+        case 6:return "&#9861;";
+        default:
+            return 0
+
+
+    }
+
+}
+btn.addEventListener("click",()=>{
+    console.log("clicked")
+    btn.addEventListener("click",()=>{
+
+    diceel.classList.add("roll-animation");
+    setTimeout(()=>{
+        diceel.classList.remove("roll-animation");
+    
+    },500)
+    
+})
+rolls()
+})
