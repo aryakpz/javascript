@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undo and Redo Example</title>
+    <style>
+        #textArea {
+            width: 300px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea id="textArea"></textarea>
+    <br>
+    <button id="undoButton">Undo</button>
+    <button id="redoButton">Redo</button>
+
+
+    <textarea id="text"></textarea>
+    <button id="undo">Undo</button>
+    <button id="redo">Redo</button>
+
+    <script>
+
+        const text = document.getElementById('text')
+        const redo = document.getElementById('redo')
+        const undo = document.getElementById('undo')
+
+        var res = []
+        var uns = []
+
+        text.addEventListener('input', () => {
+            uns.push(text.value)
+            res = []
+        })
+  
+        undo.addEventListener('click',()=>{
+            if ( uns.length > 1 ){
+                res.push(uns.pop())
+                text.value=res[res.length -1]
+            }
+        })
+
+        redo.addEventListener('click',()=>{
+            if(res.length >0){
+                uns.push(res.pop())
+                text.value=uns[uns.length -1]
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
