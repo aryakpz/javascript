@@ -123,11 +123,19 @@
 
 // ==================   button ripple =================================
 
-const btnel=document.querySelector('.btn')
+// const btnel=document.querySelector('.btn')
 
-btnel.addEventListener("mouseover",(event)=>{
-    const x=event.pageX - btnel.offsetLeft;
-    const y=event.pageY - btnel.offsetTop;
-    btnel.style.setProperty("--xPos", x + "px")
-    btnel.style.setProperty("--yPos", y + "px")
-})
+// btnel.addEventListener("mouseover",(event)=>{
+//     const x=event.pageX - btnel.offsetLeft;
+//     const y=event.pageY - btnel.offsetTop;
+//     btnel.style.setProperty("--xPos", x + "px")
+//     btnel.style.setProperty("--yPos", y + "px")
+// })
+
+
+
+
+
+//================ array ============
+let a=["afrf","fjen","ecnj"]
+console.log(a)
